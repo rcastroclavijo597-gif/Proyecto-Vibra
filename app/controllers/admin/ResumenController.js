@@ -5,6 +5,7 @@
 /** Acciones comunes de la tabla de solicitudes. */
 const AccionesSolicitud = {
   ejecutar(accion, id, refrescar) {
+    if (accion === 'alerta') TablaSolicitudesView.mostrarAlerta(SolicitudModel.porId(id)); // MODELO da los datos, VISTA los muestra
     if (accion === 'ver') Utils.ir(`admin/detalle.html?id=${id}`);
     if (accion === 'presupuesto') Utils.ir(`admin/presupuesto.html?id=${id}`);
     if (accion === 'editar') EventoFormController.abrir({ id, alGuardar: refrescar });

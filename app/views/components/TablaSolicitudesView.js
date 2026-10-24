@@ -29,6 +29,7 @@ const TablaSolicitudesView = {
         <td>${TablaSolicitudesView.badge(s.estado)}</td>
         <td>
           <div class="actions">
+            <button class="icon-btn" data-accion="alerta" title="Ver resumen en una alerta">${Icons.get('bell')}</button>
             <button class="icon-btn" data-accion="ver" title="Ver detalle">${Icons.get('eye')}</button>
             <button class="icon-btn" data-accion="editar" title="Editar">${Icons.get('edit')}</button>
             <button class="icon-btn" data-accion="eliminar" title="Eliminar">${Icons.get('trash')}</button>
@@ -36,6 +37,20 @@ const TablaSolicitudesView = {
           </div>
         </td>
       </tr>`;
+  },
+
+  /**
+   * Muestra la alerta nativa del navegador (alert) con los datos principales
+   * de una solicitud: cliente, tipo de evento, presupuesto y estado.
+   */
+  mostrarAlerta(s) {
+    const presupuesto = Number(s.precio) > 0 ? Utils.euros(s.precio, { agrupar: true }) : 'Por definir';
+    window.alert(
+      `Cliente: ${s.cliente.nombre}\n` +
+      `Tipo de evento: ${s.tipo}\n` +
+      `Presupuesto: ${presupuesto}\n` +
+      `Estado: ${Catalogo.ESTADOS[s.estado].label}`
+    );
   },
 
   render(tbody, solicitudes, vacio = 'No hay solicitudes con este filtro.') {
