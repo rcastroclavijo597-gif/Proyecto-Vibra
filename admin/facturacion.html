@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facturación · Vibra</title>
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body data-root="../" class="admin-page">
+  <div id="app-header"></div>
+
+  <main class="page">
+    <div class="container">
+      <div class="page-head">
+        <div>
+          <span class="eyebrow">Facturación</span>
+          <h1 class="h1" id="titulo">Cobros pendientes</h1>
+          <p class="lead" id="lead"></p>
+        </div>
+        <div class="page-head__actions">
+          <a class="btn btn--outline" href="calendario.html"><i data-icon="calendar" class="icon icon--sm"></i> Ver calendario</a>
+        </div>
+      </div>
+
+      <div class="tabs" id="tabs">
+        <button class="filter is-active" type="button" data-vista="pendientes">Pendientes de cobro</button>
+        <button class="filter" type="button" data-vista="pagados">Eventos pagados</button>
+      </div>
+
+      <div class="money-banner" id="banner"></div>
+
+      <section class="card">
+        <div class="table-wrap">
+          <table class="table table--plain">
+            <thead><tr><th>Cliente</th><th>Evento y fecha</th><th>Importe</th><th>Cobro</th><th></th></tr></thead>
+            <tbody id="tabla"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Núcleo, modelos, vistas y controladores (MVC) -->
+  <script src="../app/core/utils.js"></script>
+  <script src="../app/core/imagenes.js"></script>
+  <script src="../app/core/icons.js"></script>
+  <script src="../app/core/catalogo.js"></script>
+  <script src="../app/core/seed.js"></script>
+  <script src="../app/core/store.js"></script>
+  <script src="../app/models/UsuarioModel.js"></script>
+  <script src="../app/models/SesionModel.js"></script>
+  <script src="../app/models/ClienteModel.js"></script>
+  <script src="../app/models/SolicitudModel.js"></script>
+  <script src="../app/models/BorradorModel.js"></script>
+  <script src="../app/models/FotoModel.js"></script>
+  <script src="../app/views/components/ModalView.js"></script>
+  <script src="../app/views/components/HeaderView.js"></script>
+  <script src="../app/views/components/SwitcherView.js"></script>
+  <script src="../app/views/components/ServiciosConfigView.js"></script>
+  <script src="../app/views/components/FotosView.js"></script>
+  <script src="../app/views/components/EventoFormView.js"></script>
+  <script src="../app/views/components/ChatView.js"></script>
+  <script src="../app/views/components/TablaSolicitudesView.js"></script>
+  <script src="../app/controllers/AppController.js"></script>
+  <script src="../app/views/admin/FacturacionView.js"></script>
+  <script src="../app/controllers/admin/FacturacionController.js"></script>
+  <script>FacturacionController.iniciar();</script>
+</body>
+</html>

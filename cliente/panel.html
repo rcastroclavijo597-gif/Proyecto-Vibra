@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel del cliente · Vibra</title>
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/cliente.css">
+</head>
+<body data-root="../">
+  <div id="app-header"></div>
+
+  <main class="page">
+    <div class="container">
+      <div class="page-head">
+        <div>
+          <span class="eyebrow eyebrow--normal">Panel del cliente</span>
+          <h1 class="h1">Todo bajo control.</h1>
+          <p class="lead">Aquí podrás seguir tus eventos, propuestas y mensajes.</p>
+        </div>
+        <div class="page-head__actions">
+          <a class="btn btn--mint" href="servicios.html?nuevo=1"><i data-icon="plus" class="icon icon--sm"></i> Nuevo evento</a>
+        </div>
+      </div>
+
+      <div class="panel-grid">
+        <div>
+          <div id="evento-principal"></div>
+          <div id="otros-eventos"></div>
+        </div>
+        <aside class="panel-side">
+          <section class="card card--mint side-card side-card--mint">
+            <div class="side-card__label">Siguiente paso</div>
+            <h2 class="side-card__title">Recibirás cada cambio aquí.</h2>
+            <p>Las actualizaciones del administrador aparecen en tu panel en tiempo real.</p>
+          </section>
+          <section class="card card--dark side-card side-card--dark">
+            <div class="side-card__label">¿Tienes alguna duda?</div>
+            <h2 class="side-card__title">Habla con tu asesor</h2>
+            <a class="side-card__link" href="#" id="abrir-conversacion">Abrir conversación <i data-icon="longArrow"></i></a>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Núcleo, modelos, vistas y controladores (MVC) -->
+  <script src="../app/core/utils.js"></script>
+  <script src="../app/core/imagenes.js"></script>
+  <script src="../app/core/icons.js"></script>
+  <script src="../app/core/catalogo.js"></script>
+  <script src="../app/core/seed.js"></script>
+  <script src="../app/core/store.js"></script>
+  <script src="../app/models/UsuarioModel.js"></script>
+  <script src="../app/models/SesionModel.js"></script>
+  <script src="../app/models/ClienteModel.js"></script>
+  <script src="../app/models/SolicitudModel.js"></script>
+  <script src="../app/models/BorradorModel.js"></script>
+  <script src="../app/models/FotoModel.js"></script>
+  <script src="../app/views/components/ModalView.js"></script>
+  <script src="../app/views/components/HeaderView.js"></script>
+  <script src="../app/views/components/SwitcherView.js"></script>
+  <script src="../app/views/components/ServiciosConfigView.js"></script>
+  <script src="../app/views/components/FotosView.js"></script>
+  <script src="../app/views/components/EventoFormView.js"></script>
+  <script src="../app/views/components/ChatView.js"></script>
+  <script src="../app/views/components/TablaSolicitudesView.js"></script>
+  <script src="../app/controllers/AppController.js"></script>
+  <script src="../app/views/PanelClienteView.js"></script>
+  <script src="../app/controllers/PanelClienteController.js"></script>
+  <script>PanelClienteController.iniciar();</script>
+</body>
+</html>

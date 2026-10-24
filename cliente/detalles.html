@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paso 2 · Detalles · Vibra</title>
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/cliente.css">
+</head>
+<body data-root="../">
+  <div id="app-header"></div>
+
+  <main class="wizard wizard--narrow">
+    <div class="container">
+      <a class="wizard__back" id="volver-servicios" href="servicios.html"><i data-icon="arrowLeft"></i> Volver a servicios</a>
+      <span class="eyebrow wizard__eyebrow">Paso 2 de 3</span>
+      <h1 class="wizard__title">Háblanos de tu <span class="serif-accent">gran día.</span></h1>
+      <p class="wizard__lead">Con estos datos podremos preparar una propuesta que encaje de verdad contigo.</p>
+
+      <form class="form-card stack" id="form-detalles" novalidate>
+        <div class="field" data-campo="tipo">
+          <span class="field__label">¿Qué estás celebrando?</span>
+          <input type="hidden" name="tipo">
+          <div class="choice-grid" data-tipos></div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="fecha">Fecha del evento</label>
+            <div class="input-date"><i data-icon="calendar"></i><input class="input" type="date" id="fecha" name="fecha"></div>
+          </div>
+          <div class="field">
+            <label for="invitados">Número de invitados</label>
+            <select class="select" id="invitados" name="invitados"></select>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="ciudad">Ciudad o localidad</label>
+            <input class="input" id="ciudad" name="ciudad" placeholder="Ej. Madrid">
+          </div>
+          <div class="field">
+            <label for="espacio">Tipo de espacio</label>
+            <select class="select" id="espacio" name="espacio"></select>
+          </div>
+        </div>
+
+        <div class="form-card__section">Detalles de los servicios</div>
+        <p class="form-card__note">Personaliza el equipo que necesitaremos preparar para tu evento.</p>
+        <div data-config></div>
+
+        <div class="form-card__section">Fotos del lugar</div>
+        <p class="form-card__note">Opcional. Nos ayudan a saber cuántos equipos llevar y dónde ubicarlos.</p>
+        <div data-fotos></div>
+
+        <div class="field">
+          <label for="notas">Cuéntanos algo más <span class="optional">(opcional)</span></label>
+          <textarea class="textarea" id="notas" name="notas" rows="3" placeholder="Horario aproximado, nombre del espacio, ideas que tienes en mente..."></textarea>
+        </div>
+
+        <div class="form-card__foot">
+          <button class="btn btn--mint" type="submit">Revisar solicitud <i data-icon="arrowRight" class="icon icon--sm"></i></button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Núcleo, modelos, vistas y controladores (MVC) -->
+  <script src="../app/core/utils.js"></script>
+  <script src="../app/core/imagenes.js"></script>
+  <script src="../app/core/icons.js"></script>
+  <script src="../app/core/catalogo.js"></script>
+  <script src="../app/core/seed.js"></script>
+  <script src="../app/core/store.js"></script>
+  <script src="../app/models/UsuarioModel.js"></script>
+  <script src="../app/models/SesionModel.js"></script>
+  <script src="../app/models/ClienteModel.js"></script>
+  <script src="../app/models/SolicitudModel.js"></script>
+  <script src="../app/models/BorradorModel.js"></script>
+  <script src="../app/models/FotoModel.js"></script>
+  <script src="../app/views/components/ModalView.js"></script>
+  <script src="../app/views/components/HeaderView.js"></script>
+  <script src="../app/views/components/SwitcherView.js"></script>
+  <script src="../app/views/components/ServiciosConfigView.js"></script>
+  <script src="../app/views/components/FotosView.js"></script>
+  <script src="../app/views/components/EventoFormView.js"></script>
+  <script src="../app/views/components/ChatView.js"></script>
+  <script src="../app/views/components/TablaSolicitudesView.js"></script>
+  <script src="../app/controllers/AppController.js"></script>
+  <script src="../app/views/WizardView.js"></script>
+  <script src="../app/controllers/WizardController.js"></script>
+  <script>WizardController.detalles();</script>
+</body>
+</html>

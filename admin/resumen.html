@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de control · Vibra</title>
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body data-root="../" class="admin-page">
+  <div id="app-header"></div>
+
+  <main class="page">
+    <div class="container">
+      <div class="page-head">
+        <div>
+          <span class="eyebrow">Panel de control</span>
+          <h1 class="h1" id="saludo">Buenos días, Admin.</h1>
+          <p class="lead">Estas son las solicitudes y tareas que necesitan tu atención.</p>
+        </div>
+        <div class="page-head__actions">
+          <button class="btn btn--mint" id="btn-crear" type="button"><i data-icon="plus" class="icon icon--sm"></i> Crear evento manual</button>
+        </div>
+      </div>
+
+      <section class="stats" id="stats"></section>
+
+      <section class="card">
+        <div class="requests__head">
+          <div>
+            <h2 class="h2">Solicitudes recientes</h2>
+            <p>Revisa, prepara presupuestos y confirma eventos.</p>
+          </div>
+          <div class="filters" id="filtros">
+            <button class="filter is-active" type="button" data-filtro="todas">Todas</button>
+            <button class="filter" type="button" data-filtro="nueva">Nueva</button>
+            <button class="filter" type="button" data-filtro="revision">En revisión</button>
+            <button class="filter" type="button" data-filtro="confirmada">Confirmada</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Cliente / Solicitud</th><th>Evento</th><th>Presupuesto</th><th>Estado</th><th class="th-right">Acciones</th></tr></thead>
+            <tbody id="tabla"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Núcleo, modelos, vistas y controladores (MVC) -->
+  <script src="../app/core/utils.js"></script>
+  <script src="../app/core/imagenes.js"></script>
+  <script src="../app/core/icons.js"></script>
+  <script src="../app/core/catalogo.js"></script>
+  <script src="../app/core/seed.js"></script>
+  <script src="../app/core/store.js"></script>
+  <script src="../app/models/UsuarioModel.js"></script>
+  <script src="../app/models/SesionModel.js"></script>
+  <script src="../app/models/ClienteModel.js"></script>
+  <script src="../app/models/SolicitudModel.js"></script>
+  <script src="../app/models/BorradorModel.js"></script>
+  <script src="../app/models/FotoModel.js"></script>
+  <script src="../app/views/components/ModalView.js"></script>
+  <script src="../app/views/components/HeaderView.js"></script>
+  <script src="../app/views/components/SwitcherView.js"></script>
+  <script src="../app/views/components/ServiciosConfigView.js"></script>
+  <script src="../app/views/components/FotosView.js"></script>
+  <script src="../app/views/components/EventoFormView.js"></script>
+  <script src="../app/views/components/ChatView.js"></script>
+  <script src="../app/views/components/TablaSolicitudesView.js"></script>
+  <script src="../app/controllers/AppController.js"></script>
+  <script src="../app/views/admin/ResumenView.js"></script>
+  <script src="../app/controllers/admin/ResumenController.js"></script>
+  <script>ResumenController.iniciar();</script>
+</body>
+</html>

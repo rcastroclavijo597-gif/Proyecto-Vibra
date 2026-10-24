@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario · Vibra</title>
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body data-root="../" class="admin-page">
+  <div id="app-header"></div>
+
+  <main class="page">
+    <div class="container">
+      <div class="page-head">
+        <div>
+          <span class="eyebrow">Planificación</span>
+          <h1 class="h1">Calendario</h1>
+          <p class="lead">Controla eventos, montajes y disponibilidad del equipo.</p>
+        </div>
+        <div class="page-head__actions">
+          <button class="btn btn--mint" id="btn-crear" type="button"><i data-icon="plus" class="icon icon--sm"></i> Nuevo evento</button>
+        </div>
+      </div>
+
+      <section class="card">
+        <div class="calendar__head">
+          <button class="calendar__nav" id="mes-anterior" type="button" aria-label="Mes anterior"><i data-icon="chevronLeft"></i></button>
+          <h2 class="calendar__title" id="mes-titulo"></h2>
+          <button class="calendar__nav" id="mes-siguiente" type="button" aria-label="Mes siguiente"><i data-icon="chevronRight"></i></button>
+        </div>
+        <div class="calendar__grid" id="calendario"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Núcleo, modelos, vistas y controladores (MVC) -->
+  <script src="../app/core/utils.js"></script>
+  <script src="../app/core/imagenes.js"></script>
+  <script src="../app/core/icons.js"></script>
+  <script src="../app/core/catalogo.js"></script>
+  <script src="../app/core/seed.js"></script>
+  <script src="../app/core/store.js"></script>
+  <script src="../app/models/UsuarioModel.js"></script>
+  <script src="../app/models/SesionModel.js"></script>
+  <script src="../app/models/ClienteModel.js"></script>
+  <script src="../app/models/SolicitudModel.js"></script>
+  <script src="../app/models/BorradorModel.js"></script>
+  <script src="../app/models/FotoModel.js"></script>
+  <script src="../app/views/components/ModalView.js"></script>
+  <script src="../app/views/components/HeaderView.js"></script>
+  <script src="../app/views/components/SwitcherView.js"></script>
+  <script src="../app/views/components/ServiciosConfigView.js"></script>
+  <script src="../app/views/components/FotosView.js"></script>
+  <script src="../app/views/components/EventoFormView.js"></script>
+  <script src="../app/views/components/ChatView.js"></script>
+  <script src="../app/views/components/TablaSolicitudesView.js"></script>
+  <script src="../app/controllers/AppController.js"></script>
+  <script src="../app/views/admin/CalendarioView.js"></script>
+  <script src="../app/controllers/admin/CalendarioController.js"></script>
+  <script>CalendarioController.iniciar();</script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+/* =========================================================
+   VIBRA · layout.css
+   Cabeceras, contenedores, encabezados de página,
+   navegador de vistas (switcher) y notificaciones
+   ========================================================= */
+
+.container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+.container--narrow { max-width: 720px; }
+.container--form { max-width: 560px; }
+
+/* ---------- Logo ---------- */
+.logo { display: inline-flex; align-items: center; gap: 9px; font-weight: 700; font-size: 19px; letter-spacing: -.02em; }
+.logo__mark {
+  width: 27px; height: 27px; border-radius: 50%;
+  background: var(--mint); color: var(--ink);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.logo__mark svg { width: 14px; height: 14px; }
+.logo--light { color: #fff; }
+
+/* ---------- Cabecera de administración ---------- */
+.admin-header { background: var(--dark); color: #fff; }
+.admin-header__bar { height: 54px; display: flex; align-items: center; justify-content: space-between; padding-top: 4px; }
+.admin-header__brand { display: flex; align-items: center; gap: 12px; }
+.pill-tag {
+  height: 22px; padding: 0 11px; border-radius: var(--pill);
+  background: rgba(255,255,255,.12); color: rgba(255,255,255,.75);
+  font-size: 10px; font-weight: 700; display: inline-flex; align-items: center;
+}
+.admin-header__user { display: flex; align-items: center; gap: 10px; font-size: 12px; }
+.admin-header__who { text-align: right; line-height: 1.25; }
+.admin-header__who strong { display: block; font-size: 12px; }
+.admin-header__who span { font-size: 10.5px; color: rgba(255,255,255,.6); }
+.admin-header__logout { color: rgba(255,255,255,.8); font-size: 13px; }
+.admin-header__logout:hover { color: #fff; }
+
+.admin-nav { display: flex; gap: 0; margin-left: -13px; }
+.admin-nav a {
+  position: relative; padding: 13px 13px 14px;
+  font-size: 12.5px; color: rgba(255,255,255,.55); font-weight: 500;
+  transition: color .15s;
+}
+.admin-nav a:hover { color: #fff; }
+.admin-nav a.is-active { color: #fff; font-weight: 600; }
+.admin-nav a.is-active::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0;
+  height: 2px; background: var(--mint);
+}
+
+/* ---------- Cabecera de cliente ---------- */
+.client-header { background: var(--bg); border-bottom: 1px solid var(--line); }
+.client-header--white { background: var(--surface); }
+.client-header__bar { height: 60px; display: flex; align-items: center; justify-content: space-between; }
+.client-header__user { position: relative; display: flex; align-items: center; gap: 10px; font-size: 11.5px; font-weight: 600; color: var(--ink-2); }
+.client-header__user > button { display: flex; align-items: center; gap: 10px; }
+.client-header__user .avatar { width: 30px; height: 30px; }
+.client-header__user .avatar svg { width: 13px; height: 13px; }
+.steps-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding-bottom: 14px; margin-top: -4px; }
+.steps-bar span { height: 2px; border-radius: 2px; background: var(--line-strong); }
+.steps-bar span.is-done { background: var(--purple); }
+
+.dropdown {
+  position: absolute; right: 0; top: calc(100% + 8px); z-index: 30;
+  min-width: 190px; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); box-shadow: var(--shadow-lg); padding: 6px;
+}
+.dropdown__head { padding: 8px 10px; border-bottom: 1px solid var(--line); margin-bottom: 4px; }
+.dropdown__head strong { display: block; font-size: 12px; }
+.dropdown__head span { font-size: 11px; color: var(--muted); }
+.dropdown a, .dropdown button {
+  display: flex; align-items: center; gap: 8px; width: 100%;
+  padding: 8px 10px; border-radius: 8px; font-size: 12px; text-align: left; color: var(--ink-2);
+}
+.dropdown a:hover, .dropdown button:hover { background: var(--bg-soft); }
+
+/* ---------- Encabezado de página ---------- */
+.page { padding: 40px 0 72px; }
+.page-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+.page-head .eyebrow { margin-bottom: 8px; display: block; }
+.page-head__actions { display: flex; gap: 10px; flex-shrink: 0; }
+
+/* ---------- Navegador de vistas (demo) ---------- */
+.switcher { position: fixed; left: 8px; bottom: 8px; z-index: 60; font-size: 11.5px; }
+.switcher__toggle {
+  display: inline-flex; align-items: center; gap: 8px;
+  height: 26px; padding: 0 12px 0 6px; border-radius: var(--pill);
+  background: var(--dark); color: #fff; font-weight: 600; box-shadow: 0 4px 14px rgba(25,23,28,.18);
+}
+.switcher__dot { width: 16px; height: 16px; border-radius: 50%; background: var(--mint); color: var(--ink); display: inline-flex; align-items: center; justify-content: center; }
+.switcher__dot svg { width: 9px; height: 9px; }
+.switcher__toggle .icon { width: 10px; height: 10px; opacity: .7; transition: transform .2s; }
+.switcher.is-open .switcher__toggle .icon { transform: rotate(180deg); }
+.switcher__panel {
+  position: absolute; left: 0; bottom: calc(100% + 8px);
+  width: 250px; max-height: 70vh; overflow: auto;
+  background: var(--dark); color: #fff; border-radius: 14px; padding: 8px;
+  box-shadow: var(--shadow-lg);
+}
+.switcher__group { padding: 8px 8px 4px; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.45); font-weight: 700; }
+.switcher__panel a, .switcher__panel button {
+  display: flex; align-items: center; justify-content: space-between; width: 100%;
+  padding: 7px 8px; border-radius: 8px; color: rgba(255,255,255,.85); text-align: left; font-size: 12px;
+}
+.switcher__panel a:hover, .switcher__panel button:hover { background: rgba(255,255,255,.08); color: #fff; }
+.switcher__panel a.is-current { color: var(--mint); font-weight: 700; }
+.switcher__sep { height: 1px; background: rgba(255,255,255,.1); margin: 6px 4px; }
+
+/* ---------- Notificaciones ---------- */
+.toasts { position: fixed; right: 18px; bottom: 18px; z-index: 120; display: flex; flex-direction: column; gap: 8px; }
+.toast {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--dark); color: #fff; padding: 11px 16px; border-radius: 12px;
+  font-size: 12.5px; font-weight: 500; box-shadow: var(--shadow-lg);
+  animation: toast-in .25s ease;
+}
+.toast__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); flex-shrink: 0; }
+.toast--error .toast__dot { background: #FF7A8A; }
+@keyframes toast-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 860px) {
+  .page-head { flex-direction: column; align-items: flex-start; }
+  .admin-nav { overflow-x: auto; }
+  .h1--xl { font-size: 34px; }
+}

@@ -1,0 +1,116 @@
+/* =========================================================
+   VIBRA · cliente.css
+   Flujo de solicitud (pasos 1–3) y panel del cliente
+   ========================================================= */
+
+/* ---------- Paso a paso ---------- */
+.wizard { padding: 50px 0 80px; }
+.step-pill { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 26px; }
+.step-pill b { height: 21px; padding: 0 11px; border-radius: var(--pill); background: var(--purple-soft); color: var(--purple); font-size: 9px; font-weight: 800; letter-spacing: .08em; display: inline-flex; align-items: center; }
+.step-pill i { position: relative; width: 82px; height: 3px; border-radius: 3px; background: var(--line-strong); overflow: hidden; }
+.step-pill i::after { content: ''; position: absolute; inset: 0 auto 0 0; width: var(--p, 33%); background: var(--purple); }
+.wizard__title { font-size: 45px; font-weight: 600; letter-spacing: -.035em; line-height: 1.08; }
+.wizard__title .serif-accent { font-size: 1.04em; }
+.wizard__lead { font-size: 13px; color: var(--muted); margin: 18px 0 34px; max-width: 470px; line-height: 1.75; }
+.wizard__back { display: inline-flex; align-items: center; gap: 7px; font-size: 11.5px; color: var(--muted); margin-bottom: 24px; }
+.wizard__back:hover { color: var(--ink); }
+.wizard__back .icon { width: 12px; height: 12px; }
+.wizard__eyebrow { font-size: 9px; display: block; margin-bottom: 12px; }
+.wizard--narrow .container { max-width: 742px; }
+
+/* Tarjetas de servicio */
+.services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.service {
+  position: relative; text-align: left; background: var(--surface); border-radius: 18px;
+  padding: 42px 22px 24px; min-height: 186px; border: 1.5px solid transparent;
+  transition: border-color .15s, box-shadow .15s;
+}
+.service:hover { box-shadow: 0 6px 20px rgba(25,23,28,.06); }
+.service .tone { width: 37px; height: 37px; border-radius: 10px; margin-bottom: 22px; }
+.service .tone svg { width: 16px; height: 16px; }
+.service__name { font-size: 16.5px; font-weight: 600; margin-bottom: 10px; letter-spacing: -.01em; }
+.service__desc { font-size: 11.5px; color: var(--muted); line-height: 1.65; max-width: 240px; }
+.service__radio { position: absolute; top: 18px; right: 18px; width: 20px; height: 20px; border-radius: 50%; border: 1px solid var(--line-strong); display: inline-flex; align-items: center; justify-content: center; color: var(--ink); transition: background .15s, border-color .15s; }
+.service__radio svg { width: 11px; height: 11px; opacity: 0; }
+.service.is-selected { border-color: var(--ink); }
+.service.is-selected .service__radio { background: var(--mint); border-color: var(--mint); }
+.service.is-selected .service__radio svg { opacity: 1; }
+
+.selection-bar { margin-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: var(--dark); color: #fff; border-radius: 18px; padding: 22px 24px; }
+.selection-bar small { display: block; font-size: 10.5px; font-weight: 600; color: rgba(255,255,255,.55); margin-bottom: 3px; }
+.selection-bar strong { font-size: 15px; font-weight: 600; }
+.selection-bar .btn { height: 34px; padding: 0 18px; font-size: 12.5px; }
+
+/* Formulario del paso 2 */
+.form-card { background: var(--surface); border-radius: 20px; padding: 28px 26px 24px; }
+.form-card .field > label, .form-card .field__label { font-size: 12px; }
+.form-card .input, .form-card .select { height: 36px; font-size: 12px; border-radius: 10px; padding-left: 14px; }
+.form-card .textarea { font-size: 12px; min-height: 82px; border-radius: 10px; }
+.form-card .choice { height: 40px; font-size: 12px; border-radius: 10px; }
+.form-card .choice-grid { gap: 8px; margin-top: 4px; }
+.form-card .grid-2 { gap: 16px; }
+.form-card .stack { gap: 18px; }
+.form-card__section { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; margin-top: 6px; }
+.form-card__section::after { content: ''; flex: 1; height: 1px; background: var(--line-strong); }
+.form-card__note { font-size: 11px; color: var(--muted); margin-top: -4px; }
+.form-card__foot { border-top: 1px solid var(--line-strong); padding-top: 18px; margin-top: 6px; display: flex; justify-content: flex-end; }
+.input-date { position: relative; }
+.input-date .icon { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; color: var(--muted); pointer-events: none; }
+.input-date .input { padding-left: 36px; }
+.optional { display: block; font-size: 11px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+
+/* Paso 3: resumen */
+.review__row { display: grid; grid-template-columns: 170px 1fr; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+.review__row:last-child { border-bottom: 0; }
+.review__row dt { color: var(--muted); font-weight: 600; font-size: 12px; }
+.review__row dd { margin: 0; font-weight: 600; }
+.review dl { margin: 0; }
+.review__foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; border-top: 1px solid var(--line-strong); padding-top: 18px; margin-top: 10px; }
+
+/* ---------- Panel del cliente ---------- */
+.panel-grid { display: grid; grid-template-columns: 1fr 300px; gap: 14px; align-items: start; }
+.panel-side { display: flex; flex-direction: column; gap: 14px; }
+.next-event__head { display: flex; align-items: center; gap: 15px; padding: 20px 22px 18px; border-bottom: 1px solid var(--line-strong); }
+.next-event__head .tone { width: 34px; height: 34px; border-radius: 10px; }
+.next-event__head .tone svg { width: 15px; height: 15px; }
+.next-event__head .label-cap { font-size: 9px; }
+.next-event__title { font-size: 16.5px; font-weight: 700; letter-spacing: -.01em; }
+.next-event__head .badge { margin-left: auto; height: 20px; font-size: 9.5px; }
+.next-event__body { padding: 24px 22px 28px; }
+.next-event .facts .fact__label { font-size: 9px; }
+.next-event .facts .fact__value { font-size: 13px; }
+.status-box { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 30px; background: var(--bg); border-radius: 13px; padding: 16px 16px 16px 16px; }
+.status-box strong { display: block; font-size: 11.5px; font-weight: 700; margin-bottom: 4px; }
+.status-box p { font-size: 11px; color: var(--muted); }
+.status-box__actions { display: flex; gap: 8px; flex-shrink: 0; }
+.status-box .btn { font-weight: 500; }
+.status-box .btn .icon { width: 12px; height: 12px; }
+.side-card { padding: 20px 21px 22px; border-radius: 18px; }
+.side-card__label { font-size: 9px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 16px; }
+.side-card__title { font-size: 17px; font-weight: 700; margin-bottom: 12px; letter-spacing: -.015em; }
+.side-card p { font-size: 11px; line-height: 1.65; }
+.side-card--mint .side-card__label { color: rgba(25,23,28,.75); }
+.side-card--mint p { color: rgba(25,23,28,.7); }
+.side-card--dark .side-card__label { color: rgba(255,255,255,.5); }
+.side-card--dark .side-card__title { color: #fff; margin-bottom: 10px; }
+.side-card__link { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: var(--mint); }
+.side-card__link:hover { text-decoration: underline; }
+.side-card__link .icon { width: 13px; height: 13px; }
+.empty-state { padding: 46px 24px; text-align: center; }
+.empty-state p { color: var(--muted); font-size: 13px; margin: 8px 0 20px; }
+.other-events { margin-top: 14px; }
+.other-events__title { font-size: 14px; font-weight: 700; padding: 20px 22px 6px; }
+.proposal-list li { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 13px; font-weight: 600; }
+.proposal-list li span { color: var(--muted); font-size: 11.5px; display: block; font-weight: 400; }
+.proposal-totals { padding-top: 12px; font-size: 12.5px; }
+.proposal-totals div { display: flex; justify-content: space-between; color: var(--muted); margin-bottom: 6px; }
+.proposal-totals .proposal-total { color: var(--ink); font-weight: 700; align-items: baseline; margin-top: 8px; }
+.proposal-total strong { font-size: 22px; }
+.proposal-msg { background: var(--surface); border-radius: 12px; padding: 14px 16px; font-size: 12.5px; color: var(--ink-2); margin-bottom: 16px; line-height: 1.6; }
+
+@media (max-width: 860px) {
+  .services { grid-template-columns: 1fr 1fr; }
+  .panel-grid { grid-template-columns: 1fr; }
+  .wizard__title { font-size: 32px; }
+  .status-box { flex-direction: column; align-items: flex-start; }
+}

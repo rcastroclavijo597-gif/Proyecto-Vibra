@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión · Vibra</title>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body data-root="">
+  <main class="auth">
+    <section class="auth__side">
+      <div class="auth__top">
+        <a class="logo" href="index.html"><span class="logo__mark"><i data-icon="logo"></i></span>vibra</a>
+        <a class="btn btn--outline" href="registro.html">Crear cuenta</a>
+      </div>
+
+      <div class="auth__form-wrap">
+        <a class="auth__back" href="index.html"><i data-icon="arrowLeft"></i> Volver al inicio</a>
+        <span class="eyebrow">Bienvenido de nuevo</span>
+        <h1 class="auth__title">Qué bueno<br>verte otra vez.</h1>
+        <p class="auth__lead">Entra para seguir tus eventos o gestionar las solicitudes.</p>
+
+        <form id="form-auth" novalidate>
+          <div class="field"><label for="email">Correo electrónico</label><input class="input" id="email" name="email" type="email" placeholder="tu@email.com" autocomplete="email"></div>
+          <div class="field">
+            <label for="password">Contraseña</label>
+            <div class="input-group">
+              <input class="input" id="password" name="password" type="password" placeholder="Tu contraseña" autocomplete="current-password">
+              <button class="input-group__btn" type="button" data-ver-password aria-label="Mostrar contraseña"><i data-icon="eye"></i></button>
+            </div>
+          </div>
+          <button class="btn btn--mint btn--block" type="submit">Entrar <i data-icon="arrowRight" class="icon icon--sm"></i></button>
+        </form>
+        <p class="auth__alt">¿Aún no tienes cuenta? <a href="registro.html">Crear cuenta</a></p>
+
+      </div>
+    </section>
+
+    <section class="auth__visual" data-foto>
+      <div class="stage" aria-hidden="true">
+        <div class="stage__photo"></div>
+        <div class="stage__art">
+          <div class="beam beam--1"></div><div class="beam beam--2"></div><div class="beam beam--3"></div><div class="beam beam--4"></div>
+          <div class="rig"></div>
+          <span class="bulb" style="left:13%;top:43%"></span><span class="bulb" style="left:24%;top:37%"></span>
+          <span class="bulb" style="left:72%;top:37%"></span><span class="bulb" style="left:83%;top:43%"></span>
+          <span class="bulb bulb--pink" style="left:5%;top:20%"></span><span class="bulb bulb--pink" style="left:90%;top:20%"></span>
+          <svg class="crowd" viewBox="0 0 600 400" preserveAspectRatio="xMidYMax slice" fill="currentColor" aria-hidden="true"><polygon points="106.7,297.3 76.8,188.4 63.2,191.6 83.3,302.7"/><ellipse cx="66.9" cy="176.3" rx="11" ry="16" transform="rotate(-13 66.9 176.3)"/><path d="M60.1 177.9 L57.0 164.2" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M64.5 176.9 L61.4 163.3" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M69.3 175.8 L66.2 162.1" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M73.7 174.8 L70.6 161.1" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><polygon points="151.7,297.4 171.9,176.4 158.1,173.6 128.3,292.6"/><ellipse cx="167.9" cy="161.3" rx="11" ry="16" transform="rotate(12 167.9 161.3)"/><path d="M161.0 159.9 L163.9 146.2" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M165.4 160.8 L168.3 147.1" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M170.3 161.8 L173.2 148.1" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M174.7 162.7 L177.6 149.0" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><polygon points="262.0,289.1 247.0,149.5 233.0,150.5 238.0,290.9"/><ellipse cx="239.0" cy="136.0" rx="11" ry="16" transform="rotate(-4 239.0 136.0)"/><path d="M232.0 136.5 L231.0 122.6" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M236.5 136.2 L235.5 122.2" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M241.5 135.9 L240.5 121.9" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M246.0 135.5 L245.0 121.6" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><polygon points="341.5,303.4 371.7,182.0 358.3,178.0 318.5,296.6"/><ellipse cx="368.9" cy="166.6" rx="11" ry="16" transform="rotate(16 368.9 166.6)"/><path d="M362.2 164.6 L366.1 151.2" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M366.5 165.9 L370.4 152.4" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M371.3 167.3 L375.2 153.8" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M375.6 168.5 L379.6 155.1" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><polygon points="431.9,293.7 412.0,159.2 398.0,160.8 408.1,296.3"/><ellipse cx="403.5" cy="146.1" rx="11" ry="16" transform="rotate(-6 403.5 146.1)"/><path d="M396.5 146.9 L395.0 132.9" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M401.0 146.4 L399.4 132.4" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M405.9 145.8 L404.4 131.9" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M410.4 145.3 L408.9 131.4" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><polygon points="516.7,302.8 536.8,196.6 523.2,193.4 493.3,297.2"/><ellipse cx="533.2" cy="181.4" rx="11" ry="16" transform="rotate(13 533.2 181.4)"/><path d="M526.4 179.8 L529.7 166.1" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M530.8 180.8 L534.1 167.2" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M535.7 182.0 L538.9 168.3" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M540.1 183.0 L543.3 169.4" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><polygon points="571.6,308.2 591.7,216.9 578.3,213.1 548.4,301.8"/><ellipse cx="588.7" cy="201.5" rx="11" ry="16" transform="rotate(16 588.7 201.5)"/><path d="M582.0 199.6 L585.7 186.1" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M586.3 200.8 L590.1 187.4" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M591.2 202.2 L594.9 188.7" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M595.5 203.4 L599.2 189.9" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><polygon points="41.8,303.0 21.9,213.8 8.1,216.2 18.2,307.0"/><ellipse cx="12.7" cy="201.2" rx="11" ry="16" transform="rotate(-9 12.7 201.2)"/><path d="M5.8 202.3 L3.5 188.5" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M10.2 201.6 L7.9 187.8" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M15.2 200.8 L12.9 187.0" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M19.6 200.0 L17.3 186.2" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><circle cx="-15" cy="292" r="24"/><ellipse cx="-15" cy="352" rx="54" ry="44"/><circle cx="35" cy="302" r="23"/><ellipse cx="35" cy="361" rx="53" ry="44"/><circle cx="80" cy="299" r="23"/><ellipse cx="80" cy="358" rx="53" ry="44"/><circle cx="129" cy="300" r="23"/><ellipse cx="129" cy="359" rx="53" ry="44"/><circle cx="181" cy="288" r="23"/><ellipse cx="181" cy="347" rx="53" ry="44"/><circle cx="226" cy="295" r="26"/><ellipse cx="226" cy="357" rx="56" ry="44"/><circle cx="271" cy="289" r="23"/><ellipse cx="271" cy="348" rx="53" ry="44"/><circle cx="323" cy="295" r="23"/><ellipse cx="323" cy="354" rx="53" ry="44"/><circle cx="376" cy="285" r="24"/><ellipse cx="376" cy="345" rx="54" ry="44"/><circle cx="430" cy="302" r="27"/><ellipse cx="430" cy="365" rx="57" ry="44"/><circle cx="474" cy="300" r="27"/><ellipse cx="474" cy="363" rx="57" ry="44"/><circle cx="524" cy="283" r="24"/><ellipse cx="524" cy="343" rx="54" ry="44"/><circle cx="568" cy="299" r="29"/><ellipse cx="568" cy="364" rx="59" ry="44"/><circle cx="614" cy="291" r="26"/><ellipse cx="614" cy="353" rx="56" ry="44"/><rect x="0" y="345" width="600" height="60"/></svg>
+        </div>
+      </div>
+      <figure class="testimonial">
+        <div class="testimonial__stars"><i data-icon="star"></i><i data-icon="star"></i><i data-icon="star"></i><i data-icon="star"></i><i data-icon="star"></i></div>
+        <blockquote class="testimonial__quote" style="margin:0">“Con Vibra, nuestra boda no fue una fiesta. Fue el evento del año.”</blockquote>
+        <figcaption class="testimonial__author">Laura &amp; Dani<span>Madrid · 2024</span></figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <!-- Núcleo, modelos, vistas y controladores (MVC) -->
+  <script src="app/core/utils.js"></script>
+  <script src="app/core/imagenes.js"></script>
+  <script src="app/core/icons.js"></script>
+  <script src="app/core/catalogo.js"></script>
+  <script src="app/core/seed.js"></script>
+  <script src="app/core/store.js"></script>
+  <script src="app/models/UsuarioModel.js"></script>
+  <script src="app/models/SesionModel.js"></script>
+  <script src="app/models/ClienteModel.js"></script>
+  <script src="app/models/SolicitudModel.js"></script>
+  <script src="app/models/BorradorModel.js"></script>
+  <script src="app/models/FotoModel.js"></script>
+  <script src="app/views/components/ModalView.js"></script>
+  <script src="app/views/components/HeaderView.js"></script>
+  <script src="app/views/components/SwitcherView.js"></script>
+  <script src="app/views/components/ServiciosConfigView.js"></script>
+  <script src="app/views/components/FotosView.js"></script>
+  <script src="app/views/components/EventoFormView.js"></script>
+  <script src="app/views/components/ChatView.js"></script>
+  <script src="app/views/components/TablaSolicitudesView.js"></script>
+  <script src="app/controllers/AppController.js"></script>
+  <script src="app/views/AuthView.js"></script>
+  <script src="app/controllers/AuthController.js"></script>
+  <script>AuthController.login();</script>
+</body>
+</html>

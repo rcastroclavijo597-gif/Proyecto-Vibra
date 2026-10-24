@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paso 3 · Revisar · Vibra</title>
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/cliente.css">
+</head>
+<body data-root="../">
+  <div id="app-header"></div>
+
+  <main class="wizard wizard--narrow">
+    <div class="container">
+      <a class="wizard__back" href="detalles.html"><i data-icon="arrowLeft"></i> Volver a los detalles</a>
+      <span class="eyebrow wizard__eyebrow">Paso 3 de 3</span>
+      <h1 class="wizard__title">Revisa tu <span class="serif-accent">solicitud.</span></h1>
+      <p class="wizard__lead">Comprueba que todo está bien. Nuestro equipo la revisará y te enviará una propuesta a tu panel.</p>
+
+      <section class="form-card review">
+        <dl id="resumen"></dl>
+        <div class="review__foot">
+          <a class="link-purple small" href="detalles.html">Editar detalles</a>
+          <button class="btn btn--mint" id="btn-enviar" type="button">Enviar solicitud</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Núcleo, modelos, vistas y controladores (MVC) -->
+  <script src="../app/core/utils.js"></script>
+  <script src="../app/core/imagenes.js"></script>
+  <script src="../app/core/icons.js"></script>
+  <script src="../app/core/catalogo.js"></script>
+  <script src="../app/core/seed.js"></script>
+  <script src="../app/core/store.js"></script>
+  <script src="../app/models/UsuarioModel.js"></script>
+  <script src="../app/models/SesionModel.js"></script>
+  <script src="../app/models/ClienteModel.js"></script>
+  <script src="../app/models/SolicitudModel.js"></script>
+  <script src="../app/models/BorradorModel.js"></script>
+  <script src="../app/models/FotoModel.js"></script>
+  <script src="../app/views/components/ModalView.js"></script>
+  <script src="../app/views/components/HeaderView.js"></script>
+  <script src="../app/views/components/SwitcherView.js"></script>
+  <script src="../app/views/components/ServiciosConfigView.js"></script>
+  <script src="../app/views/components/FotosView.js"></script>
+  <script src="../app/views/components/EventoFormView.js"></script>
+  <script src="../app/views/components/ChatView.js"></script>
+  <script src="../app/views/components/TablaSolicitudesView.js"></script>
+  <script src="../app/controllers/AppController.js"></script>
+  <script src="../app/views/WizardView.js"></script>
+  <script src="../app/controllers/WizardController.js"></script>
+  <script>WizardController.revisar();</script>
+</body>
+</html>

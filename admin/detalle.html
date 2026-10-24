@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de solicitud · Vibra</title>
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body data-root="../" class="admin-page">
+  <div id="app-header"></div>
+
+  <main class="page">
+    <div class="container">
+      <div class="page-head">
+        <div>
+          <span class="eyebrow" id="eyebrow">Solicitud</span>
+          <h1 class="h1" id="titulo">Cargando…</h1>
+          <p class="lead">Consulta y gestiona todos los datos, el precio y el estado de esta solicitud.</p>
+        </div>
+        <div class="page-head__actions">
+          <button class="btn btn--outline" id="btn-editar" type="button"><i data-icon="edit" class="icon icon--sm"></i> Editar datos</button>
+          <button class="btn btn--mint" id="btn-presupuesto" type="button">Crear presupuesto <i data-icon="arrowRight" class="icon icon--sm"></i></button>
+        </div>
+      </div>
+
+      <div class="detail" id="detalle"></div>
+    </div>
+  </main>
+
+  <!-- Núcleo, modelos, vistas y controladores (MVC) -->
+  <script src="../app/core/utils.js"></script>
+  <script src="../app/core/imagenes.js"></script>
+  <script src="../app/core/icons.js"></script>
+  <script src="../app/core/catalogo.js"></script>
+  <script src="../app/core/seed.js"></script>
+  <script src="../app/core/store.js"></script>
+  <script src="../app/models/UsuarioModel.js"></script>
+  <script src="../app/models/SesionModel.js"></script>
+  <script src="../app/models/ClienteModel.js"></script>
+  <script src="../app/models/SolicitudModel.js"></script>
+  <script src="../app/models/BorradorModel.js"></script>
+  <script src="../app/models/FotoModel.js"></script>
+  <script src="../app/views/components/ModalView.js"></script>
+  <script src="../app/views/components/HeaderView.js"></script>
+  <script src="../app/views/components/SwitcherView.js"></script>
+  <script src="../app/views/components/ServiciosConfigView.js"></script>
+  <script src="../app/views/components/FotosView.js"></script>
+  <script src="../app/views/components/EventoFormView.js"></script>
+  <script src="../app/views/components/ChatView.js"></script>
+  <script src="../app/views/components/TablaSolicitudesView.js"></script>
+  <script src="../app/controllers/AppController.js"></script>
+  <script src="../app/views/admin/DetalleView.js"></script>
+  <script src="../app/controllers/admin/DetalleController.js"></script>
+  <script>DetalleController.iniciar();</script>
+</body>
+</html>

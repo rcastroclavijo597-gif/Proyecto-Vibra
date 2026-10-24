@@ -1,0 +1,96 @@
+/* =========================================================
+   VIBRA · admin.css
+   Pantallas del panel de administración
+   ========================================================= */
+
+/* ---------- Tabla de solicitudes ---------- */
+.requests__head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 24px 22px 20px; }
+.requests__head .h2 { font-size: 19px; }
+.requests__head p { font-size: 11.5px; color: var(--muted); margin-top: 3px; }
+.requests__tools { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.search-input {
+  height: 34px; width: 260px; border-radius: var(--pill); border: 1px solid var(--line-strong);
+  background: var(--bg); padding: 0 18px; font-size: 12px; outline: none;
+}
+.search-input:focus { border-color: var(--purple); background: var(--surface); }
+
+/* ---------- Detalle de solicitud ---------- */
+.detail { display: grid; grid-template-columns: 1fr 258px; gap: 18px; align-items: start; }
+.detail__main, .detail__side { display: flex; flex-direction: column; gap: 18px; }
+.detail .card__head--line .h2 { font-size: 15px; }
+.detail__section-title { font-size: 15px; font-weight: 700; margin-bottom: 20px; }
+.detail .card__pad { padding: 24px 24px 26px; }
+
+.client-card { padding: 20px 17px 18px; }
+.client-card__label { font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: 14px; }
+.client-card__who { display: flex; align-items: center; gap: 11px; padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,.12); }
+.client-card__who strong { font-size: 12.5px; display: block; }
+.client-card__who div span { font-size: 10px; color: rgba(255,255,255,.55); }
+.client-card__data { display: flex; flex-direction: column; gap: 10px; padding: 18px 0 20px; font-size: 11px; font-weight: 600; word-break: break-all; }
+.client-card .btn { height: 36px; font-size: 12px; width: 100%; }
+
+.manage { padding: 20px 17px 18px; }
+.manage__title { font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+.manage .field { margin-bottom: 14px; gap: 7px; }
+.manage .field > label { font-size: 11px; }
+.manage .input, .manage .select { height: 38px; font-size: 11.5px; border-radius: 10px; padding-left: 12px; }
+.manage .btn { height: 36px; width: 100%; font-size: 12px; }
+.manage__note { font-size: 9.5px; color: var(--muted); text-align: center; margin-top: 10px; line-height: 1.5; }
+
+.danger-zone { padding: 18px 17px; }
+.danger-zone__title { font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+.danger-zone p { font-size: 10px; color: var(--muted); line-height: 1.5; margin-bottom: 14px; }
+.danger-zone .btn { width: 100%; height: 36px; font-size: 12px; font-weight: 500; }
+
+/* ---------- Presupuesto ---------- */
+.budget { display: grid; grid-template-columns: 1fr 258px; gap: 18px; align-items: start; }
+.budget__card { padding: 26px 24px; }
+.budget__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.budget__head .h2 { font-size: 15px; }
+.budget__add { display: inline-flex; align-items: center; gap: 7px; color: var(--purple); font-size: 12px; font-weight: 500; }
+.budget__add:hover { text-decoration: underline; }
+.budget__add .icon { width: 11px; height: 11px; }
+.concept:last-child { border-bottom: 0; }
+.concept { display: grid; grid-template-columns: 1fr 104px 26px; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.concept__name, .concept__desc { width: 100%; border: 0; outline: none; background: transparent; padding: 1px 5px; margin-left: -5px; border-radius: 5px; }
+.concept__name { font-weight: 700; font-size: 12.5px; }
+.concept__desc { font-size: 11px; color: var(--muted); }
+.concept__name:focus, .concept__desc:focus { background: var(--bg); }
+.price-input { position: relative; }
+.price-input input { width: 100%; height: 32px; border: 1px solid var(--line-strong); border-radius: 9px; text-align: right; padding: 0 26px 0 8px; font-size: 12px; outline: none; }
+.price-input input:focus { border-color: var(--purple); }
+.price-input span { position: absolute; right: 11px; top: 50%; transform: translateY(-50%); font-size: 12px; color: var(--ink-2); pointer-events: none; }
+.concept__remove { color: var(--muted-2); display: inline-flex; justify-content: center; }
+.concept__remove:hover { color: var(--red); }
+.concept__remove .icon { width: 13px; height: 13px; }
+.budget__msg { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line-strong); }
+.budget__msg label { font-size: 11.5px; font-weight: 700; display: block; margin-bottom: 10px; }
+.budget__msg .textarea { font-size: 12px; min-height: 80px; }
+
+.summary { padding: 22px 20px; position: sticky; top: 18px; }
+.summary__label { font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: 18px; }
+.summary__row { display: flex; justify-content: space-between; font-size: 10.5px; color: rgba(255,255,255,.75); margin-bottom: 10px; }
+.summary__total { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid rgba(255,255,255,.14); margin-top: 16px; padding-top: 20px; }
+.summary__total span { font-size: 12px; font-weight: 700; }
+.summary__total strong { font-size: 25px; font-weight: 700; color: var(--mint); letter-spacing: -.02em; }
+.summary__note { font-size: 9.5px; color: rgba(255,255,255,.5); line-height: 1.55; margin: 18px 0 16px; }
+.summary .btn { width: 100%; height: 36px; font-size: 12px; }
+.summary__status { margin-top: 12px; font-size: 10.5px; color: var(--mint); text-align: center; }
+
+/* ---------- Facturación ---------- */
+.money-banner { display: flex; justify-content: space-between; align-items: flex-end; padding: 20px 20px 18px; border-radius: 16px; margin-bottom: 18px; }
+.money-banner__label { font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 8px; }
+.money-banner__value { font-size: 29px; font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
+.money-banner__count { font-size: 10.5px; font-weight: 600; }
+.money-banner--paid { background: var(--mint-soft); color: #15655A; }
+.money-banner--pending { background: var(--orange-soft); color: #B4531B; }
+
+/* ---------- Clientes ---------- */
+.clients__search { padding: 18px 17px; }
+.clients__search .search-input { width: 330px; height: 34px; font-size: 12px; }
+
+@media (max-width: 860px) {
+  .detail, .budget { grid-template-columns: 1fr; }
+  .requests__head { flex-direction: column; align-items: flex-start; }
+  .clients__search .search-input, .search-input { width: 100%; }
+}

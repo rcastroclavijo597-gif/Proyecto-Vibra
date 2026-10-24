@@ -1,0 +1,95 @@
+/* =========================================================
+   VIBRA · auth.css
+   Inicio (landing), registro e inicio de sesión
+   ========================================================= */
+
+.auth { display: grid; grid-template-columns: 44% 56%; min-height: 100vh; }
+.auth__side { position: relative; padding: 20px 68px 50px; display: flex; flex-direction: column; }
+.auth__top { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.auth__top .btn { height: 28px; padding: 0 12px; font-size: 11px; font-weight: 600; }
+.auth__form-wrap { width: 100%; max-width: 330px; margin: 64px 0 0 120px; }
+.auth__form-wrap .eyebrow { display: block; }
+.auth__back { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; color: var(--muted); margin-bottom: 26px; }
+.auth__back:hover { color: var(--ink); }
+.auth__back .icon { width: 13px; height: 13px; }
+.auth__title { font-size: 35px; font-weight: 600; letter-spacing: -.03em; line-height: 1.15; margin: 12px 0 10px; }
+.auth__lead { font-size: 12.5px; color: var(--muted); margin-bottom: 30px; }
+.auth form { display: flex; flex-direction: column; gap: 17px; }
+.auth .field { gap: 8px; }
+.auth .field > label { font-size: 11.5px; }
+.auth .input { height: 37px; font-size: 12px; border-radius: 11px; padding: 0 14px; }
+.auth .grid-2 { gap: 15px; }
+.auth .checkbox { font-size: 11px; margin: 2px 0; }
+.auth .btn--mint { height: 34px; }
+.auth__alt { text-align: center; font-size: 11px; color: var(--muted); margin-top: 16px; }
+.auth__alt a { color: var(--ink); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.auth__hint { margin-top: 22px; padding: 12px 14px; border: 1px dashed var(--line-strong); border-radius: 12px; font-size: 11.5px; color: var(--muted); line-height: 1.65; }
+.auth__hint strong { color: var(--ink-2); }
+.form-alert { padding: 11px 14px; border-radius: 10px; background: var(--red-soft); color: var(--red); font-size: 12px; font-weight: 600; }
+
+/* ---------- Panel visual (foto de evento) ---------- */
+.auth__visual { position: relative; overflow: hidden; background: #0C1517; color: #fff; }
+.stage { position: absolute; inset: 0; }
+.stage__photo { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity .4s; }
+.has-photo .stage__photo { opacity: 1; }
+.has-photo .stage__art { display: none; }
+.stage__art {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(60% 45% at 50% 22%, rgba(126, 210, 200, .45), transparent 70%),
+    radial-gradient(40% 30% at 18% 55%, rgba(80, 160, 160, .25), transparent 70%),
+    radial-gradient(40% 30% at 82% 55%, rgba(80, 160, 160, .25), transparent 70%),
+    linear-gradient(180deg, #2B4A4E 0%, #19302F 45%, #0E1717 75%, #0B1011 100%);
+}
+.beam {
+  position: absolute; top: -10%; left: 50%; width: 22%; height: 75%; transform-origin: top center;
+  background: linear-gradient(180deg, rgba(220, 255, 250, 0) 0%, rgba(200, 245, 238, .55) 45%, rgba(190, 240, 232, .15) 100%);
+  filter: blur(14px); mix-blend-mode: screen;
+}
+.beam--1 { transform: translateX(-50%) rotate(38deg); }
+.beam--2 { transform: translateX(-50%) rotate(-38deg); }
+.beam--3 { transform: translateX(-50%) rotate(9deg); opacity: .35; width: 10%; }
+.beam--4 { transform: translateX(-50%) rotate(-9deg); opacity: .35; width: 10%; }
+.rig {
+  position: absolute; left: 50%; top: 21%; width: 13%; aspect-ratio: 1.2; transform: translateX(-50%); border-radius: 30%;
+  background: radial-gradient(circle at 50% 50%, #FBF0FF 0 26%, #E7C8F2 34%, rgba(230, 200, 240, .3) 55%, transparent 72%);
+}
+.bulb { position: absolute; width: 4.5%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, #F3E6FA 0 30%, rgba(225, 190, 240, .55) 50%, transparent 72%); }
+.bulb--pink { background: radial-gradient(circle, #FFD3E2 0 25%, rgba(255, 120, 150, .55) 50%, transparent 72%); }
+.crowd { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 58%; color: #0A0F11; filter: blur(.6px); }
+.auth__visual::after, .hero__visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(10, 12, 16, .85) 100%); pointer-events: none; }
+.testimonial { position: absolute; left: 46px; right: 46px; bottom: 34px; z-index: 2; }
+.testimonial__stars { display: flex; gap: 5px; color: var(--mint); margin-bottom: 18px; }
+.testimonial__stars svg { width: 10px; height: 10px; }
+.testimonial__quote { font-size: 27px; font-weight: 600; line-height: 1.3; letter-spacing: -.015em; max-width: 440px; }
+.testimonial__author { margin-top: 18px; font-size: 11px; font-weight: 700; }
+.testimonial__author span { color: rgba(255,255,255,.5); font-weight: 600; margin-left: 8px; }
+
+/* ---------- Landing (inicio) ---------- */
+.landing-header { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.landing-header nav { display: flex; gap: 10px; }
+.hero { padding: 56px 0 56px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 44px; align-items: center; }
+.hero__title { font-size: 56px; font-weight: 600; letter-spacing: -.04em; line-height: 1.04; margin: 16px 0 20px; }
+.hero__lead { font-size: 15px; color: var(--muted); max-width: 440px; margin-bottom: 30px; line-height: 1.7; }
+.hero__ctas { display: flex; gap: 10px; flex-wrap: wrap; }
+.hero__ctas .btn { height: 42px; padding: 0 24px; font-size: 13.5px; }
+.hero__visual { position: relative; height: 460px; border-radius: 28px; overflow: hidden; background: #0C1517; color: #fff; }
+.hero__visual .testimonial { left: 30px; right: 30px; bottom: 26px; }
+.hero__visual .testimonial__quote { font-size: 22px; }
+.landing-services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding-bottom: 80px; }
+.landing-service { padding: 22px; }
+.landing-service .tone { width: 36px; height: 36px; border-radius: 10px; margin-bottom: 20px; }
+.landing-service .tone svg { width: 16px; height: 16px; }
+.landing-service h3 { font-size: 16px; font-weight: 600; }
+.landing-service p { font-size: 12.5px; color: var(--muted); margin-top: 6px; line-height: 1.6; }
+.landing-section-title { font-size: 24px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 18px; }
+
+@media (max-width: 960px) {
+  .auth { grid-template-columns: 1fr; }
+  .auth__visual { display: none; }
+  .auth__side { padding: 20px 24px 40px; }
+  .auth__form-wrap { margin: 40px auto 0; }
+  .hero { grid-template-columns: 1fr; }
+  .hero__title { font-size: 40px; }
+  .landing-services { grid-template-columns: 1fr; }
+}

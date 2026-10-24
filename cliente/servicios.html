@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paso 1 · Servicios · Vibra</title>
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/cliente.css">
+</head>
+<body data-root="../">
+  <div id="app-header"></div>
+
+  <main class="wizard">
+    <div class="container">
+      <div class="step-pill" style="--p:33%"><b>PASO 1 DE 3</b><i></i></div>
+      <h1 class="wizard__title">¿Qué necesita tu <span class="serif-accent">evento?</span></h1>
+      <p class="wizard__lead">Selecciona todos los servicios que te interesan. Después afinaremos cada detalle contigo.</p>
+
+      <div class="services" id="servicios"></div>
+
+      <div class="selection-bar">
+        <div>
+          <small id="seleccion-titulo">Aún no has seleccionado servicios</small>
+          <strong id="seleccion-texto">Tu evento empieza a tomar forma.</strong>
+        </div>
+        <button class="btn btn--mint" id="btn-continuar" type="button">Continuar <i data-icon="arrowRight" class="icon icon--sm"></i></button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Núcleo, modelos, vistas y controladores (MVC) -->
+  <script src="../app/core/utils.js"></script>
+  <script src="../app/core/imagenes.js"></script>
+  <script src="../app/core/icons.js"></script>
+  <script src="../app/core/catalogo.js"></script>
+  <script src="../app/core/seed.js"></script>
+  <script src="../app/core/store.js"></script>
+  <script src="../app/models/UsuarioModel.js"></script>
+  <script src="../app/models/SesionModel.js"></script>
+  <script src="../app/models/ClienteModel.js"></script>
+  <script src="../app/models/SolicitudModel.js"></script>
+  <script src="../app/models/BorradorModel.js"></script>
+  <script src="../app/models/FotoModel.js"></script>
+  <script src="../app/views/components/ModalView.js"></script>
+  <script src="../app/views/components/HeaderView.js"></script>
+  <script src="../app/views/components/SwitcherView.js"></script>
+  <script src="../app/views/components/ServiciosConfigView.js"></script>
+  <script src="../app/views/components/FotosView.js"></script>
+  <script src="../app/views/components/EventoFormView.js"></script>
+  <script src="../app/views/components/ChatView.js"></script>
+  <script src="../app/views/components/TablaSolicitudesView.js"></script>
+  <script src="../app/controllers/AppController.js"></script>
+  <script src="../app/views/WizardView.js"></script>
+  <script src="../app/controllers/WizardController.js"></script>
+  <script>WizardController.servicios();</script>
+</body>
+</html>
